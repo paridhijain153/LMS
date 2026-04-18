@@ -1,0 +1,29 @@
+/* ─── Logo Component ─────────────────────────────────────── */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  font-size: 1.125rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo__icon {
+  display: grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: calc(var(--radius) - 4px);
+  background: var(--gradient-primary);
+  color: var(--primary-foreground);
+  box-shadow: var(--shadow-glow);
+  flex-shrink: 0;
+}
+
+.logo__icon svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.logo__text { color: inherit; }

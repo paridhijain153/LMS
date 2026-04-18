@@ -1,0 +1,50 @@
+/* ─── Avatar Component ───────────────────────────────────── */
+.avatar {
+  position: relative;
+  display: flex;
+  width: 2.5rem;
+  height: 2.5rem;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 9999px;
+}
+
+.avatar--sm { width: 2.25rem; height: 2.25rem; }
+.avatar--lg { width: 3rem; height: 3rem; }
+
+.avatar__image {
+  aspect-ratio: 1 / 1;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.avatar__fallback {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background-color: var(--muted);
+  color: var(--muted-foreground);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+/* Gradient fallback variant */
+.avatar__fallback--gradient {
+  background: var(--gradient-primary);
+  color: var(--primary-foreground);
+}
+
+/* Soft fallback variant */
+.avatar__fallback--soft {
+  background-color: var(--primary-soft);
+  color: var(--primary);
+}
+
+/* Ring variant */
+.avatar--ring {
+  box-shadow: 0 0 0 2px var(--primary-soft);
+}
