@@ -1,0 +1,106 @@
+.instructor-card {
+  border-radius: calc(var(--radius) + 4px);
+  border: 1px solid var(--border);
+  background-color: var(--card);
+  box-shadow: var(--shadow-sm);
+  padding: 1.25rem;
+}
+
+.instructor-card__title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.85rem;
+}
+
+.instructor-form-grid {
+  display: grid;
+  gap: 0.85rem;
+}
+
+@media (min-width: 700px) {
+  .instructor-form-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.instructor-form-grid .form-field--full {
+  grid-column: 1 / -1;
+}
+
+.instructor-field-label {
+  display: inline-block;
+  margin-bottom: 0.35rem;
+  font-size: 0.8rem;
+  color: var(--muted-foreground);
+}
+
+.instructor-select {
+  width: 100%;
+  height: 2.5rem;
+  border: 1px solid var(--input);
+  border-radius: var(--radius);
+  background: var(--background);
+  padding: 0 0.75rem;
+  font-size: 0.875rem;
+  color: var(--foreground);
+}
+
+.instructor-inline-actions {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.instructor-pill {
+  border-radius: 999px;
+  font-size: 0.74rem;
+  font-weight: 600;
+  padding: 0.2rem 0.55rem;
+}
+
+.instructor-pill--published,
+.instructor-pill--active,
+.instructor-pill--completed {
+  background: hsl(152 60% 42% / 0.13);
+  color: hsl(152 60% 30%);
+}
+
+.instructor-pill--draft,
+.instructor-pill--paused {
+  background: hsl(0 75% 58% / 0.12);
+  color: hsl(0 75% 45%);
+}
+
+.instructor-empty {
+  border: 1px dashed var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
+  text-align: center;
+  color: var(--muted-foreground);
+}
+
+.instructor-resource-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-top: 0.65rem;
+}
+
+.instructor-resource-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.4rem;
+  border: 1px solid var(--border);
+  background: var(--secondary);
+  border-radius: var(--radius);
+  padding: 0.45rem 0.6rem;
+  font-size: 0.8rem;
+}
+
+.instructor-resource-meta {
+  color: var(--muted-foreground);
+  text-transform: uppercase;
+  font-size: 0.7rem;
+}
