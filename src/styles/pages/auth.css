@@ -12,7 +12,10 @@
   display: none;
   position: relative;
   overflow: hidden;
-  background: var(--gradient-primary);
+  background-image: url("/src/assets/login_img.png"); /* add your image here */
+  background-size: cover;       /* makes image cover full area */
+  background-position: center;  /* centers the image */
+  background-repeat: no-repeat; /* prevents repeating */
   padding: 3rem;
   color: var(--primary-foreground);
   flex-direction: column;
@@ -30,6 +33,15 @@
   pointer-events: none;
   z-index: 0;
 }
+
+/* .hero__image-glow {
+  position: absolute;
+  inset: -1rem;
+  border-radius: 1.5rem;
+  background: var(--gradient-primary);
+  opacity: 0.2;
+  filter: blur(48px);
+} */
 
 .auth-brand__logo { position: relative; z-index: 2; }
 

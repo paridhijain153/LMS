@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Logo } from "@/components/Logo";
 import { toast } from "@/hooks/use-toast";
+import heroImg from "@/assets/login_img.png";
 import { useAuth } from "@/context/AuthContext";
 import "@/styles/pages/auth.css";
 
@@ -77,13 +78,18 @@ export const AuthShell = ({ mode, title, subtitle }) => {
       <div className="auth-brand">
         <div className="auth-brand__overlay"/>
         <Logo to="/" className="auth-brand__logo"/>
+        
         <div className="auth-brand__copy">
-          <h2 className="auth-brand__heading">Learn without limits.</h2>
+        <div className="hero__image-wrap">
+            <div className="hero__image-glow"/>
+       
+          </div>
+          {/* <h2 className="auth-brand__heading">Learn without limits.</h2>
           <p className="auth-brand__desc">
             Join 50,000+ learners advancing their careers with expert-led courses.
-          </p>
+          </p> */}
         </div>
-        <div className="auth-brand__footer">© 2025 EduVibe</div>
+        <div className="auth-brand__footer">© 2026 EduVibe</div>
       </div>
 
       {/* Right form */}
