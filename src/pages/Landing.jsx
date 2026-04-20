@@ -5,7 +5,7 @@ import { Logo } from "@/components/Logo";
 import { CourseCard } from "@/components/CourseCard";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { courses, categories, testimonials } from "@/data/mockData";
-import heroImg from "@/assets/hero.jpg";
+import heroImg from "@/assets/image.png";
 import "@/styles/pages/landing.css";
 const iconMap = { Code2, Palette, Briefcase, TrendingUp, BarChart3, Camera, Music, Languages };
 const Landing = () => {
