@@ -1,0 +1,79 @@
+.payment-success-card {
+  border: 1px solid var(--border);
+  border-radius: calc(var(--radius) + 4px);
+  background: var(--card);
+  box-shadow: var(--shadow-sm);
+  padding: 1.25rem;
+}
+
+.payment-success-card__header {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+}
+
+.payment-success-card__icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  background: hsl(152 60% 42% / 0.14);
+  color: hsl(152 60% 34%);
+}
+
+.payment-success-card__icon svg {
+  width: 1.3rem;
+  height: 1.3rem;
+}
+
+.payment-success-card__header h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.payment-success-card__header p {
+  margin-top: 0.25rem;
+  color: var(--muted-foreground);
+}
+
+.payment-receipt-grid {
+  margin-top: 1rem;
+  border-top: 1px solid var(--border);
+  padding-top: 1rem;
+  display: grid;
+  gap: 0.8rem;
+}
+
+@media (min-width: 900px) {
+  .payment-receipt-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.payment-receipt-grid div {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--secondary);
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.payment-receipt-grid span {
+  font-size: 0.78rem;
+  color: var(--muted-foreground);
+}
+
+.payment-receipt-grid strong {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.payment-success-card__actions {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}

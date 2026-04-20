@@ -1,0 +1,121 @@
+/* ─── TopBar ─────────────────────────────────────────────── */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  border-bottom: 1px solid var(--border);
+  background-color: hsl(0 0% 100% / 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.topbar__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+}
+@media (min-width: 640px) {
+  .topbar__inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1024px) {
+  .topbar__inner { padding-inline: 2rem; }
+}
+
+.topbar__title { font-size: 1.25rem; font-weight: 700; }
+@media (min-width: 640px) {
+  .topbar__title { font-size: 1.5rem; }
+}
+
+.topbar__subtitle {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  margin-top: 0.125rem;
+}
+
+.topbar__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.topbar__search {
+  position: relative;
+  display: none;
+}
+@media (min-width: 768px) {
+  .topbar__search { display: block; }
+}
+
+.topbar__search-icon {
+  pointer-events: none;
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1rem;
+  height: 1rem;
+  color: var(--muted-foreground);
+}
+
+.topbar__search-input {
+  width: min(16rem, 42vw);
+  min-width: 10rem;
+  padding-left: 2.25rem;
+}
+
+@media (max-width: 900px) {
+  .topbar__search-input {
+    width: min(14rem, 46vw);
+    min-width: 9rem;
+  }
+}
+
+.topbar__bell {
+  position: relative;
+}
+
+.topbar__bell-dot {
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 9999px;
+  background-color: var(--primary);
+}
+
+.topbar__user {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.topbar__user-meta {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .topbar__user-meta {
+    display: block;
+  }
+}
+
+.topbar__user-name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.topbar__user-role {
+  font-size: 0.75rem;
+  text-transform: capitalize;
+  color: var(--muted-foreground);
+  line-height: 1.1;
+}
